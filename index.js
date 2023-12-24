@@ -31,6 +31,10 @@ app.use(
 );
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+  res.status(200).send("server is working fine");
+});
+
 app.listen(process.env.PORT, () => {
   try {
     console.log(
@@ -40,10 +44,6 @@ app.listen(process.env.PORT, () => {
     console.log(error.message);
     process.exit(1);
   }
-});
-
-app.get("/", (req, res) => {
-  res.status(200).send("server is working fine");
 });
 
 app.use("/api", UserRouter);
