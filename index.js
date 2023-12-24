@@ -24,8 +24,7 @@ dotenv.config();
 app.use(
   cors({
     // origin: "https://protfolio-parallax.vercel.app",
-    origin:
-      "https://6587b8c944a5bcfa9db4e790--zippy-rugelach-5ddb7a.netlify.app",
+    origin: "https://protfolio-parallax.vercel.app/",
     credentials: true,
   })
 );
