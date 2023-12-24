@@ -76,7 +76,6 @@ export const MakeProject = async (req, res) => {
       name: name,
       description: des,
       Url: url,
-      UserCreated: req.user.id,
       images: {
         public_id: Cloudinary_response.public_id,
         url: Cloudinary_response.secure_url,
