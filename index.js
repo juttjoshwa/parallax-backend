@@ -31,14 +31,6 @@ app.use(
 );
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
-  res.status(200).send("server is working fine");
-});
-
-app.use("/api", UserRouter);
-app.use("/api/make", ProjectsRoutes, SkillRouter);
-app.use("/api/message", MessageRouter);
-
 app.listen(process.env.PORT, () => {
   try {
     console.log(
@@ -49,5 +41,13 @@ app.listen(process.env.PORT, () => {
     process.exit(1);
   }
 });
+
+app.get("/", (req, res) => {
+  res.status(200).send("server is working fine");
+});
+
+app.use("/api", UserRouter);
+app.use("/api/make", ProjectsRoutes, SkillRouter);
+app.use("/api/message", MessageRouter);
 
 DB_connect();
