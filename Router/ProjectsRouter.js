@@ -31,10 +31,10 @@ const requireAuth = async (req, res, next) => {
 
 const ProjectsRoutes = express.Router();
 
-ProjectsRoutes.post("/makePro", requireAuth, MakeProject);
-ProjectsRoutes.put("/updatePro", requireAuth, UpdateProject);
+ProjectsRoutes.post("/makePro", MakeProject);
+ProjectsRoutes.put("/updatePro", UpdateProject);
 // ProjectsRoutes.post("/testpro", requireAuth, TestPro);
 ProjectsRoutes.get("/getallprojects", GetAllProjects);
-ProjectsRoutes.delete("/deleteproject", requireAuth, DeleteProject);
+ProjectsRoutes.delete("/deleteproject", DeleteProject);
 
 export default ProjectsRoutes;

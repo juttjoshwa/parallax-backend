@@ -23,7 +23,6 @@ dotenv.config();
 
 app.use(
   cors({
-    // origin: "https://protfolio-parallax.vercel.app",
     origin: "https://protfolio-parallax.vercel.app",
     credentials: true,
   })
