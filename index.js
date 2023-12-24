@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.listen(process.env.PORT, () => {
   try {
     console.log(
-      `server is working fine on http://localhost:${process.env.PORT}`
+      `server is working fine on http://localhost:${process.env.PORT}/`
     );
   } catch (error) {
     console.log(error.message);
