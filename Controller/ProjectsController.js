@@ -175,7 +175,7 @@ export const DeleteProject = async (req, res) => {
     if (!dew) {
       return res.status(400).json({
         success: false,
-        message: "Project ID is required",
+        message: "Project dew is required",
       });
     }
     const imageUrlString = dew;
