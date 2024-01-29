@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import DB_connect from "./DataBase/DB.js";
@@ -21,12 +20,12 @@ app.use(
 );
 dotenv.config();
 
-app.use(
-  cors({
-    origin: "https://protfolio-parallax.vercel.app",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://protfolio-parallax.vercel.app",
+//     credentials: true,
+//   })
+// );
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
